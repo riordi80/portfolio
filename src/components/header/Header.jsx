@@ -1,13 +1,14 @@
-import Navbar from "./Navbar"
-import './header.css';
+import logo from "./porfolio.svg";
+import Navbar from "./Navbar";
+import "./Header.css";
 
 function Header() {
   return (
     <header>
-      <h1>Porfolio</h1>
-      <Navbar></Navbar>
+      <img src={logo} alt="Porfolio" className="logo" />
+      <Navbar />
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

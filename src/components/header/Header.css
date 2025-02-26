@@ -3,13 +3,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #f8f8f8;
+
 }
 
-/* Title */
-header h1 {
-  margin: 0;
-  font-size: 24px;
+/* Logo */
+.logo {
+  width: 300px;
+  height: auto;
 }
 
 /* Navigation Menu */
@@ -27,4 +27,11 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #333;
+}
+
+nav ul li a.active {
+  background-color: #a53dff;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
 }
