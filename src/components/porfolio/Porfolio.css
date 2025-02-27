@@ -1,0 +1,118 @@
+/* Sección general */
+.porfolio-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.porfolio-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.porfolio-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de las tarjetas */
+.porfolio-grid {
+  display: flex;
+  flex-wrap: wrap;    /* Para que se ajusten y pasen a la siguiente fila si no cabe */
+  gap: 20px;          /* Espacio entre tarjetas */
+  justify-content: center;
+}
+
+/* Tarjeta individual */
+.porfolio-card {
+  background-color: #fff;
+  width: calc(33.333% - 20px); /* 3 columnas. Resta 20px del gap total */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.porfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.porfolio-card img {
+  width: 100%;      /* O un ancho fijo, por ejemplo, 100% del contenedor */
+  height: 200px;    /* Altura fija para todas las imágenes */
+  object-fit: cover;
+  object-position: center; /* Opcional, para centrar la imagen */
+}
+
+.porfolio-info {
+  padding: 20px;
+}
+
+.porfolio-info .category {
+  font-size: 0.9rem;
+  color: #a53dff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.porfolio-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.porfolio-info .description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Botón de "Case Study" dentro de la tarjeta */
+.case-study-btn {
+  background-color: #a53dff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.case-study-btn:hover {
+  background-color: #8e32d4;
+}
+
+/* Botón para ver más proyectos */
+.more-projects-btn {
+  margin-top: 40px;
+  padding: 12px 20px;
+  background-color: #a53dff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.more-projects-btn:hover {
+  background-color: #8e32d4;
+}
+
+/* Ajustes responsive */
+/* En pantallas intermedias (tablets), se muestran 2 columnas */
+@media (max-width: 1024px) {
+  .porfolio-card {
+    width: calc(50% - 20px);
+  }
+}
+
+/* En pantallas pequeñas (móviles), se muestra 1 columna */
+@media (max-width: 768px) {
+  .porfolio-card {
+    width: 100%;
+  }
+}

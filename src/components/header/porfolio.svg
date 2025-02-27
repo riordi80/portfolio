@@ -10,6 +10,8 @@
    inkscape:export-filename="logo.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   sodipodi:docname="porfolio.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.51087175"
-     inkscape:cx="222.16926"
-     inkscape:cy="521.65734"
+     inkscape:cx="224.1267"
+     inkscape:cy="523.61478"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -62,7 +64,7 @@
              id="tspan61"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.8611px;font-family:Poppins;-inkscape-font-specification:'Poppins, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.16883"
              x="133.63686"
-             y="121.20216">Porfolio</tspan></text>
+             y="121.20216">Portfolio</tspan></text>
         <circle
            style="fill:#a53dff;fill-opacity:1;stroke:none;stroke-width:1.16883;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
            id="path325"

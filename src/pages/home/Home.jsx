@@ -1,5 +1,6 @@
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
+import Porfolio from "../../components/porfolio/Porfolio";
 import "./Home.css";
 import profileImage from "./thmb.jpg";
 
@@ -34,6 +35,7 @@ function Home() {
           <img src={profileImage} alt="Profile" />
         </div>
       </div>
+      <Porfolio />
       <Footer />
     </>
   );

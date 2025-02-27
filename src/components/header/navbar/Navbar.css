@@ -1,0 +1,93 @@
+/* Estilos generales para el Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Lista de enlaces para pantallas grandes */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-links a.active {
+  background-color: #a53dff;
+  color: #fff;
+}
+
+/* Botón de menú: oculto en pantallas grandes */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle img {
+  width: 24px; /* Ajusta el tamaño según prefieras */
+  height: auto;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Mostrar el botón en pantallas pequeñas */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ocultar la lista de enlaces de la versión escritorio */
+  .nav-links {
+    display: none;
+  }
+  
+  /* Cuando el menú se active, se mostrará como un sidebar */
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;       /* Ancho del menú lateral */
+    height: 100%;
+    background: #fff;   /* Fondo claro para contraste */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 60px 20px; /* Espacio superior para dejar lugar al header */
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .nav-links li {
+    margin: 15px 0;
+    text-align: left;
+  }
+  
+  /* Estilo para los enlaces en el sidebar */
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Ajuste específico para el enlace activo en el sidebar: se reduce el padding */
+  .nav-links.open a.active {
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+}
