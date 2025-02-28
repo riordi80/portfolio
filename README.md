@@ -9,6 +9,7 @@ This project is a web application prototype built with React. Developed as part 
 - A home page with an introduction, statistics, and a profile image.
 - A portfolio section dynamically generated from an array of project objects.
 - A contact page featuring an interactive map powered by React Leaflet, along with contact details and a contact form.
+- A blog page that displays articles on design, development, and tech tips using a reusable blog component.
 
 ## Built With
 
@@ -33,7 +34,7 @@ To get a local copy up and running, follow these simple steps.
 
 1. Clone the repo:
 ```
-   git clone https://github.com/yourusername/porfolio-website.git
+   git clone https://github.com/riordi80/portfolio.git
 ```
 2. Install NPM packages:
 ```
