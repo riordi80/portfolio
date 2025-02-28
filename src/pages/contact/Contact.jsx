@@ -12,26 +12,26 @@ function Contact() {
     <>
       <Header />
       <section className="contact-page">
-        <h2>Contacto</h2>
+        <h2>Contact</h2>
         <div className="contact-info-top">
           <div className="contact-form">
-            <h3>Envíanos un mensaje</h3>
+            <h3>Send us a message</h3>
             <form>
-              <label htmlFor="name">Nombre:</label>
+              <label htmlFor="name">Name:</label>
               <input type="text" id="name" name="name" required />
 
               <label htmlFor="email">Email:</label>
               <input type="email" id="email" name="email" required />
 
-              <label htmlFor="message">Mensaje:</label>
+              <label htmlFor="message">Message:</label>
               <textarea id="message" name="message" rows="5" required></textarea>
 
               <button type="submit">Enviar</button>
             </form>
           </div>
           <div className="contact-details">
-            <p><strong>Dirección:</strong> IES El Rincón · LPGC, ESP</p>
-            <p><strong>Teléfono:</strong> +34 928 567 890</p>
+            <p><strong>Address:</strong> IES El Rincón · LPGC, ESP</p>
+            <p><strong>Phone:</strong> +34 928 567 890</p>
             <p><strong>Email:</strong> contacto@ejemplo.com</p>
           </div>
         </div>
@@ -47,7 +47,7 @@ function Contact() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={position}>
-              <Popup>Estamos aquí</Popup>
+              <Popup>We are here!</Popup>
             </Marker>
           </MapContainer>
         </div>
