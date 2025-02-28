@@ -1,4 +1,4 @@
-/* Sección general */
+/* General Section */
 .porfolio-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -17,19 +17,21 @@
   margin-bottom: 40px;
 }
 
-/* Contenedor de las tarjetas */
+/* Cards container */
 .porfolio-grid {
   display: flex;
-  flex-wrap: wrap;    /* Para que se ajusten y pasen a la siguiente fila si no cabe */
-  gap: 20px;          /* Espacio entre tarjetas */
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Space between cards */
   justify-content: center;
 }
 
-/* Tarjeta individual */
+/* Card */
 .porfolio-card {
   background-color: #fff;
-  width: calc(33.333% - 20px); /* 3 columnas. Resta 20px del gap total */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: calc(33.333% - 20px);
+  /* 3 columns. Cut 20px from the total gap. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   text-align: left;
@@ -41,10 +43,12 @@
 }
 
 .porfolio-card img {
-  width: 100%;      /* O un ancho fijo, por ejemplo, 100% del contenedor */
-  height: 200px;    /* Altura fija para todas las imágenes */
+  width: 100%;
+  height: 200px;
+  /* Fixed height for all images */
   object-fit: cover;
-  object-position: center; /* Opcional, para centrar la imagen */
+  object-position: center;
+  /* Center image */
 }
 
 .porfolio-info {
@@ -69,7 +73,7 @@
   margin-bottom: 15px;
 }
 
-/* Botón de "Case Study" dentro de la tarjeta */
+/* Button inside card */
 .case-study-btn {
   background-color: #a53dff;
   color: #fff;
@@ -84,7 +88,7 @@
   background-color: #8e32d4;
 }
 
-/* Botón para ver más proyectos */
+/* More projects button */
 .more-projects-btn {
   margin-top: 40px;
   padding: 12px 20px;
@@ -102,15 +106,15 @@
   background-color: #8e32d4;
 }
 
-/* Ajustes responsive */
-/* En pantallas intermedias (tablets), se muestran 2 columnas */
+/* Media Queries */
+/* Tablets, 2 columns */
 @media (max-width: 1024px) {
   .porfolio-card {
     width: calc(50% - 20px);
   }
 }
 
-/* En pantallas pequeñas (móviles), se muestra 1 columna */
+/* Mobile phone, 1 column */
 @media (max-width: 768px) {
   .porfolio-card {
     width: 100%;

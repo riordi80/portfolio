@@ -2,20 +2,6 @@
 
 A modern responsive portfolio website built with React that showcases projects in UI/UX design and development.
 
-## Table of Contents
-
-- [About The Project](#about-the-project)
-- [Built With](#built-with)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Third-Party Components](#third-party-components)
-- [Design Inspiration](#design-inspiration)
-- [Contributing](#contributing)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
-
 ## About The Project
 
 This project is a web application prototype built with React. Developed as part of my Vocational Training Advanced Level in Computing – Multi-platform Application Development course. While the project also touches on responsive design, interactive features, and other modern web technologies, its primary focus is on deepening my skills in React. It serves as a dynamic learning environment where I experiment with React components, state management  and best practices in modern web development. The website includes:

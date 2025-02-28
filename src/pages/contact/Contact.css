@@ -1,9 +1,7 @@
-/* Contact.css */
 .contact-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
-
   color: #333;
   font-family: 'Poppins', sans-serif;
 }
@@ -15,8 +13,8 @@
   color: #1f2937;
 }
 
-/* Sección de información: mapa y datos de contacto */
-.contact-info {
+/* Top section (contact form and contact info) */
+.contact-info-top {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -24,21 +22,14 @@
   justify-content: space-between;
 }
 
-.map-container {
-  flex: 1 1 500px;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 .contact-details {
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #fff;
-  border: 2px solid #e5e7eb;
+  background: #a53dff;
+  color: #fff;
+  border: 2px solid #a53dff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -46,18 +37,18 @@
 
 .contact-details p {
   margin: 15px 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  color: #fff;
 }
 
 .contact-details strong {
-  color: #a53dff;
+  color: #fff;
 }
 
-/* Formulario de contacto */
+/* Contact form */
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+  flex: 1 1 600px;
   background: #fff;
   padding: 30px 40px;
   border: 2px solid #e5e7eb;
@@ -115,16 +106,24 @@
   background-color: #8e32d4;
 }
 
-/* Responsive */
+/* Map container */
+.map-container {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  .contact-info {
+  .contact-info-top {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .map-container,
-  .contact-details {
+  .contact-details,
+  .contact-form {
     flex: 1 1 100%;
   }
 }

@@ -11,26 +11,28 @@ function Navbar() {
     setMenuOpen(prev => !prev);
   };
 
-  // Cierra el menú al hacer clic en un enlace
+  // Closes the menu when clicking on a link
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
 
-  // Se activa "Inicio" cuando el pathname es "/" o "/home"
+  // "Home" is active when the pathname is "/" or "/home"
   const isInicioActive = location.pathname === '/' || location.pathname === '/home';
 
   return (
     <nav>
-      <button className="menu-toggle" onClick={toggleMenu}><img src={menuButton} alt="Menú" /></button>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        <img src={menuButton} alt="Menu" />
+      </button>
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li>
-          <NavLink to="/home" className={() => (isInicioActive ? "active" : "")} onClick={handleLinkClick}>Inicio</NavLink>
+          <NavLink to="/home" className={() => (isInicioActive ? "active" : "")} onClick={handleLinkClick}>Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={handleLinkClick}>Acerca</NavLink>
+          <NavLink to="/blog" className={({ isActive }) => (isActive ? "active" : "")} onClick={handleLinkClick}>Blog</NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={handleLinkClick}>Contacto</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={handleLinkClick}>Contact</NavLink>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,46 @@
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blog-post {
+  background: #fff;
+  padding: 30px 40px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.blog-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures that the image is cropped while preserving its aspect ratio */
+  display: block;
+}
+
+.blog-post h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #a53dff;
+  margin-bottom: 20px;
+}
+
+.blog-post p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
