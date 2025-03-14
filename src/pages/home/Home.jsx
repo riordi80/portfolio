@@ -1,56 +1,33 @@
+import React, { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Porfolio from "../../components/porfolio/Porfolio";
 import "./Home.css";
 import profileImage from "./thmb.jpg";
-
-const projects = [
-  {
-    id: 1,
-    title: "Product Admin Dashboard",
-    image: "https://plus.unsplash.com/premium_vector-1732563175855-a5e89f7a6b79?q=80&w=2386&auto=format&fit=crop&ixlib=rb-4.0.3",
-    category: "Web Design",
-    description: "A modern admin dashboard designed to manage product data and analytics, blending sleek design with robust functionality.",
-  },
-  {
-    id: 2,
-    title: "Creative Agency Website",
-    image: "https://plus.unsplash.com/premium_vector-1726071199482-ff1454a46264?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3",
-    category: "Branding",
-    description: "A visually striking website built for a creative agency, merging innovative branding with seamless user interactions.",
-  },
-  {
-    id: 3,
-    title: "E-Commerce Platform",
-    image: "https://plus.unsplash.com/premium_vector-1727153149407-b4f9caeaec69?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3",
-    category: "UI/UX",
-    description: "An intuitive e-commerce platform that offers a smooth shopping experience, thanks to its modern UI/UX design and easy navigation.",
-  },
-  {
-    id: 4,
-    title: "Porfolio Admin Dashboard",
-    image: "https://plus.unsplash.com/premium_vector-1734127305210-f2425c1d614f?q=80&w=2050&auto=format&fit=crop&ixlib=rb-4.0.3",
-    category: "Web Design",
-    description: "A tailored admin dashboard for portfolio management, offering comprehensive tools for tracking projects and performance.",
-  },
-  {
-    id: 5,
-    title: "Travel Blog Website",
-    image: "https://plus.unsplash.com/premium_vector-1719933451291-e78eb7716872?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3",
-    category: "Photography",
-    description: "A dynamic travel blog website that shares captivating stories and stunning visuals to ignite your wanderlust.",
-  },
-  {
-    id: 6,
-    title: "Product Landing Page",
-    image: "https://plus.unsplash.com/premium_vector-1721902752336-f3ab143c3827?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3",
-    category: "Marketing",
-    description: "A high-converting landing page that highlights product features with a clean, modern design to boost customer engagement.",
-  },
-];
-
+import { db } from "../../firebaseConfig";
 
 function Home() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const projectsCollection = collection(db, "projects");
+        const projectSnapshot = await getDocs(projectsCollection);
+        const projectsList = projectSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setProjects(projectsList);
+      } catch (error) {
+        console.error("Error fetching projects: ", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <>
       <Header />

@@ -1,4 +1,4 @@
-# React · Porfolio Website
+# React · Portfolio Website
 
 A modern responsive portfolio website built with React that showcases projects in UI/UX design and development.
 
