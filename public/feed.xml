@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+<channel>
+  <title>News in my Porfolio</title>
+  <link>https://porfolio-2a043.web.app/</link>
+  <description>Porfolio · Richard Ortiz Developer</description>
+  <item>
+    <title>Tips for Efficient Coding</title>
+    <link>https://porfolio-2a043.web.app/blog#item-3</link>
+    <description>Here are some practical tips and best practices for writing clean and efficient code. Focus on creating reusable components, applying consistent styling, and optimizing performance to build scalable applications.</description>
+  </item>
+  <item>
+    <title>Design Trends in 2025</title>
+    <link>https://porfolio-2a043.web.app/blog#item-2</link>
+    <description>In this post, I explore the latest design trends and examine their impact on modern web development. Discover innovative ideas and practical examples that inspire creative design solutions.</description>
+  </item>
+    <item>
+    <title>My First Blog Post</title>
+    <link>https://porfolio-2a043.web.app/blog#item-1</link>
+    <description>This is my first blog post where I share insights about UI/UX design and development. I discuss practical approaches, creative ideas, and real-world examples that mark the beginning of my journey in building user-friendly applications.</description>
+  </item>
+</channel>
+
+</rss> 

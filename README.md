@@ -4,12 +4,13 @@ A modern responsive portfolio website built with React that showcases projects i
 
 ## About The Project
 
-This project is a web application prototype built with React. Developed as part of my Vocational Training Advanced Level in Computing – Multi-platform Application Development course. While the project also touches on responsive design, interactive features, and other modern web technologies, its primary focus is on deepening my skills in React. It serves as a dynamic learning environment where I experiment with React components, state management  and best practices in modern web development. The website includes:
+This project is a web application prototype built with React. Developed as part of my Vocational Training Advanced Level in Computing – Multi-platform Application Development course. While the project also touches on responsive design, interactive features, and other modern web technologies, its primary focus is on deepening my skills in React. It serves as a dynamic learning environment where I experiment with React components, state management, and best practices in modern web development. The website includes:
 
 - A home page with an introduction, statistics, and a profile image.
 - A portfolio section dynamically generated from an array of project objects.
 - A contact page featuring an interactive map powered by React Leaflet, along with contact details and a contact form.
 - A blog page that displays articles on design, development, and tech tips using a reusable blog component.
+- An RSS Feed page providing a syndication feed of blog content.
 
 ## Built With
 
@@ -25,10 +26,13 @@ This project is a web application prototype built with React. Developed as part 
 - **Dynamic Content:** Projects are rendered dynamically from a JSON array passed as props.
 - **Interactive Map:** Location map integrated with React Leaflet.
 - **Modern UI:** Inspired by contemporary design trends with a focus on simplicity and clarity.
+- **RSS Feed:** A dedicated page offering an RSS feed of blog content for content syndication.
 
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
+
+**Online Demo:** [Visit the Live Site](https://porfolio-2a043.web.app/)
 
 ## Installation
 

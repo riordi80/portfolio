@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaRss } from 'react-icons/fa';
 import './Footer.css';
 
 function Footer() {
@@ -10,26 +10,29 @@ function Footer() {
           © 2025 Porfolio · All rights reserved |{' '}
           <Link to="/privacy-policy">Privacy Policy</Link> |{' '}
           <Link to="/terms-and-conditions">Terms and Conditions</Link> |{' '}
-          <Link to="/refund-policy">Refund Policy</Link>{' '}
+          <Link to="/refund-policy">Refund Policy</Link>
         </p>
       </div>
       <div className="footer-social">
-        <a href="https://facebook.com/" target="_blank">
+        <a href="https://facebook.com/" target="_blank" rel="noreferrer">
           <FaFacebookF />
         </a>
-        <a href="https://twitter.com/" target="_blank">
+        <a href="https://twitter.com/" target="_blank" rel="noreferrer">
           <FaTwitter />
         </a>
-        <a href="https://instagram.com/" target="_blank">
+        <a href="https://instagram.com/" target="_blank" rel="noreferrer">
           <FaInstagram />
         </a>
+        <Link to="/rss">
+          <FaRss />
+        </Link>
       </div>
       <div className="footer-links">
         <Link to="/home">Home</Link>
         <Link to="/blog">Blog</Link>
         <Link to="/contact">Contact</Link>
-        <a href="https://github.com/riordi80/" target="_blank">Github</a>
-        <a href="https://www.figma.com/community/file/1170206889562959306" target="_blank">Figma Inspiration</a>
+        <a href="#" target="_blank" rel="noreferrer">Github</a>
+        <a href="#" target="_blank" rel="noreferrer">Figma Inspiration</a>
       </div>
     </footer>
   );
