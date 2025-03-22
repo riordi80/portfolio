@@ -6,13 +6,11 @@ header {
 
 }
 
-/* Logo */
 .logo {
-  width: 300px;
+  width: 250px;
   height: auto;
 }
 
-/* Navigation Menu */
 nav ul {
   display: flex;
   list-style: none;

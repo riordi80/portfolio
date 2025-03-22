@@ -1,3 +1,4 @@
+import Comments from "../comments/Comments";
 import "./BlogComponent.css";
 
 function BlogComponent(props) {
@@ -17,6 +18,8 @@ function BlogComponent(props) {
             By {post.author} on {post.date}
           </p>
           <p>{post.content}</p>
+          {/* Aquí insertamos los comentarios */}
+          <Comments postId={post.id} />
         </article>
       ))}
     </div>

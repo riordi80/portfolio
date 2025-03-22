@@ -4,7 +4,6 @@ nav {
   position: relative;
 }
 
-/* Link list. Large screens */
 .nav-links {
   display: flex;
   list-style: none;
@@ -29,7 +28,6 @@ nav {
   color: #fff;
 }
 
-/* Menu button: hidden on large screens */
 .menu-toggle {
   display: none;
   background: none;
@@ -45,19 +43,16 @@ nav {
 /* Media Queries */
 @media (max-width: 768px) {
 
-  /* Show the button on small screens */
   .menu-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* Hide from the desktop version */
   .nav-links {
     display: none;
   }
 
-  /* Sidebar */
   .nav-links.open {
     display: flex;
     flex-direction: column;
@@ -78,14 +73,12 @@ nav {
     text-align: left;
   }
 
-  /* Links in the sidebar */
   .nav-links a {
     font-size: 1.2rem;
     padding: 10px;
     border-bottom: 1px solid #eee;
   }
 
-  /* Active link in the sidebar */
   .nav-links.open a.active {
     padding: 8px 10px;
     border-radius: 5px;
