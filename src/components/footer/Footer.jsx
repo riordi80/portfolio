@@ -14,13 +14,13 @@ function Footer() {
         </p>
       </div>
       <div className="footer-social">
-        <a href="https://facebook.com/" target="_blank" rel="noreferrer">
+        <a href="https://facebook.com/" target="_blank">
           <FaFacebookF />
         </a>
-        <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+        <a href="https://twitter.com/" target="_blank">
           <FaTwitter />
         </a>
-        <a href="https://instagram.com/" target="_blank" rel="noreferrer">
+        <a href="https://instagram.com/" target="_blank">
           <FaInstagram />
         </a>
         <Link to="/rss">
@@ -31,8 +31,8 @@ function Footer() {
         <Link to="/home">Home</Link>
         <Link to="/blog">Blog</Link>
         <Link to="/contact">Contact</Link>
-        <a href="#" target="_blank" rel="noreferrer">Github</a>
-        <a href="#" target="_blank" rel="noreferrer">Figma Inspiration</a>
+        <a href="https://github.com/riordi80/" target="_blank">Github</a>
+        <a href="https://www.figma.com/community/file/1170206889562959306/picto-personal-portfolio-free-template-community" target="_blank">Figma Inspiration</a>
       </div>
     </footer>
   );

@@ -18,7 +18,6 @@ function BlogComponent(props) {
             By {post.author} on {post.date}
           </p>
           <p>{post.content}</p>
-          {/* Aquí insertamos los comentarios */}
           <Comments postId={post.id} />
         </article>
       ))}
