@@ -29,6 +29,10 @@ This project is a web application prototype built with React. Developed as part 
 - **RSS Feed:** A dedicated page offering an RSS feed of blog content for content syndication.
 - **Comments CRUD:** Blog comments are fully managed through Firestore with integrated Create, Read, Update, and Delete operations, allowing users to add, edit, and delete comments.
 
+**RSS Items Links**
+![Screenshot](public/rss-screenshot.png)
+
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
