@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
-import "./Register.css"; // Crea estilos específicos para este componente
+import "./Register.css"; 
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -23,7 +23,7 @@ function Register() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       setSuccess("User registered successfully!");
-      // Aquí puedes redirigir al usuario o limpiar los campos
+      
     } catch (err) {
       setError(err.message);
     }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
-import "./Login.css"; // Puedes crear estilos específicos para este componente
+import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ function Login() {
     setError("");
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      // Aquí puedes redirigir o mostrar un mensaje de éxito
+      
     } catch (err) {
       setError(err.message);
     }
