@@ -8,9 +8,12 @@ import "./BlogPage.css";
 
 function BlogPage() {
   const [posts, setPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Fetch Posts from Firestore
   useEffect(() => {
     async function fetchPosts() {
       try {
@@ -19,11 +22,12 @@ function BlogPage() {
           orderBy(documentId(), "desc")
         );
         const querySnapshot = await getDocs(q);
-        const postsData = querySnapshot.docs.map(doc => ({
+        const postsData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data()
         }));
         setPosts(postsData);
+        setFilteredPosts(postsData);
       } catch (err) {
         console.error("Error fetching blog posts:", err);
         setError(err);
@@ -33,6 +37,15 @@ function BlogPage() {
     }
     fetchPosts();
   }, []);
+
+  // Filter articles
+  useEffect(() => {
+    const filtered = posts.filter((post) =>
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.content.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredPosts(filtered);
+  }, [searchQuery, posts]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -47,7 +60,15 @@ function BlogPage() {
       <Header />
       <section className="blog-page">
         <h2>Blog</h2>
-        <BlogComponent posts={posts} />
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search articles..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+        <BlogComponent posts={filteredPosts} />
       </section>
       <Footer />
     </>
