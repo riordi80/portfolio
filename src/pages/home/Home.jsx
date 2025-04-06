@@ -1,3 +1,4 @@
+// Home.jsx
 import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import Footer from "../../components/footer/Footer";
@@ -6,8 +7,10 @@ import Porfolio from "../../components/porfolio/Porfolio";
 import "./Home.css";
 import profileImage from "./thmb.jpg";
 import { db } from "../../firebaseConfig";
+import CalendarChart from "../../components/calendar-chart/CalendarChart";
 
 function Home() {
+
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {

@@ -9,7 +9,8 @@ import {
   deleteDoc,
   doc
 } from "firebase/firestore";
-import { db } from "../../firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
+import { db, auth } from "../../firebaseConfig";
 import "./Comments.css";
 
 function Comments({ postId }) {
@@ -19,8 +20,18 @@ function Comments({ postId }) {
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [currentComment, setCurrentComment] = useState(null);
   const [updatedText, setUpdatedText] = useState("");
+  const [user, setUser] = useState(null);
+  const [authMessage, setAuthMessage] = useState("");
 
-  // Fetch comments filter by id
+  // Monitor authentication state
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  // Fetch comments for the current post
   const fetchComments = async () => {
     try {
       const commentsRef = collection(db, "comments");
@@ -40,23 +51,30 @@ function Comments({ postId }) {
     fetchComments();
   }, [postId]);
 
-  // Add new comment
+  // Add a new comment (only if the user is authenticated)
   const handleAddComment = async () => {
+    if (!user) {
+      setAuthMessage("Please sign in to leave a comment.");
+      return;
+    }
     if (!newComment.trim()) return;
     try {
       await addDoc(collection(db, "comments"), {
         postId,
         text: newComment,
-        createdAt: new Date()
+        createdAt: new Date(),
+        author: user.displayName,
+        userId: user.uid
       });
       setNewComment("");
       fetchComments();
+      setAuthMessage("");
     } catch (error) {
       console.error("Error adding comment: ", error);
     }
   };
 
-  // Open edit modal
+  // Open the modal to edit a comment
   const openEditModal = (comment) => {
     setCurrentComment(comment);
     setUpdatedText(comment.text);
@@ -69,7 +87,7 @@ function Comments({ postId }) {
     setUpdatedText("");
   };
 
-  // Save changes (edit)
+  // Save changes to a comment
   const handleEditComment = async () => {
     try {
       await updateDoc(doc(db, "comments", currentComment.id), {
@@ -82,7 +100,7 @@ function Comments({ postId }) {
     }
   };
 
-  // Open confirmation delete modal
+  // Open the confirmation modal to delete a comment
   const openDeleteModal = (comment) => {
     setCurrentComment(comment);
     setDeleteModalOpen(true);
@@ -93,7 +111,7 @@ function Comments({ postId }) {
     setCurrentComment(null);
   };
 
-  // Delete comment
+  // Delete the comment
   const handleDeleteComment = async () => {
     try {
       await deleteDoc(doc(db, "comments", currentComment.id));
@@ -111,27 +129,39 @@ function Comments({ postId }) {
         <div key={comment.id} className="comment">
           <p>{comment.text}</p>
           <span className="comment-meta">
+            {comment.author ? comment.author : "Anonymous"} -{" "}
             {comment.createdAt &&
               (typeof comment.createdAt.toDate === "function"
                 ? comment.createdAt.toDate().toLocaleString()
                 : new Date(comment.createdAt).toLocaleString())}
           </span>
-          <div className="comment-actions">
-            <button onClick={() => openEditModal(comment)}>Edit</button>
-            <button onClick={() => openDeleteModal(comment)}>Delete</button>
-          </div>
+          {/* Show edit/delete buttons only if the comment belongs to the current user */}
+          {user && comment.userId === user.uid && (
+            <div className="comment-actions">
+              <button onClick={() => openEditModal(comment)}>Edit</button>
+              <button onClick={() => openDeleteModal(comment)}>Delete</button>
+            </div>
+          )}
         </div>
       ))}
       <div className="add-comment">
-        <textarea
-          value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
-          placeholder="Write a comment..."
-        />
-        <button onClick={handleAddComment}>Add Comment</button>
+        {user ? (
+          <>
+            <textarea
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+              placeholder="Write a comment..."
+            />
+            <button onClick={handleAddComment}>Add Comment</button>
+          </>
+        ) : (
+          <p className="error">
+            {authMessage || "Please sign in to add a comment."}
+          </p>
+        )}
       </div>
 
-      {/* Edition modal */}
+      {/* Modal to edit a comment */}
       {editModalOpen && (
         <div className="modal-overlay">
           <div className="modal">
@@ -148,7 +178,7 @@ function Comments({ postId }) {
         </div>
       )}
 
-      {/* Delete confirmation modal */}
+      {/* Confirmation modal to delete a comment */}
       {deleteModalOpen && (
         <div className="modal-overlay">
           <div className="modal">
