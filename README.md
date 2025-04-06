@@ -27,7 +27,11 @@ This project is a web application prototype built with React. Developed as part 
 - **Interactive Map:** Location map integrated with React Leaflet.
 - **Modern UI:** Inspired by contemporary design trends with a focus on simplicity and clarity.
 - **RSS Feed:** A dedicated page offering an RSS feed of blog content for content syndication.
-- **Comments CRUD:** Blog comments are fully managed through Firestore with integrated Create, Read, Update, and Delete operations, allowing users to add, edit, and delete comments.
+- **Comments CRUD with Authentication:** 
+  - Blog comments are fully managed through Firestore with integrated Create, Read, Update, and Delete operations.
+  - Only authenticated users can add comments.
+  - Each user is only allowed to edit or delete their own comments, ensuring that no user can modify another's content.
+
 
 **RSS Items Links**
 ![Screenshot](public/rss-screenshot.png)
