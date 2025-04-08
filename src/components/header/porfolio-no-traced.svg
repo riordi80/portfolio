@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180.9635mm"
+   height="65.19136mm"
+   viewBox="0 0 180.9635 65.19136"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="logo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   sodipodi:docname="porfolio.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.51087175"
+     inkscape:cx="226.08414"
+     inkscape:cy="523.61478"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.616892,-78.749036)">
+    <g
+       id="g1375">
+      <g
+         id="g2551">
+        <rect
+           style="fill:none;fill-opacity:1;stroke:none;stroke-width:1.16883;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
+           id="rect1368"
+           width="180.96349"
+           height="65.191368"
+           x="18.616892"
+           y="78.749039" />
+        <text
+           xml:space="preserve"
+           style="font-size:24.8611px;line-height:normal;font-family:'Blue Highway Linocut';-inkscape-font-specification:'Blue Highway Linocut, Normal';text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:1.16883;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
+           x="133.63686"
+           y="121.20216"
+           id="text63"><tspan
+             sodipodi:role="line"
+             id="tspan61"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.8611px;font-family:Poppins;-inkscape-font-specification:'Poppins, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.16883"
+             x="133.63686"
+             y="121.20216">Porfolio</tspan></text>
+        <circle
+           style="fill:#a53dff;fill-opacity:1;stroke:none;stroke-width:1.16883;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
+           id="path325"
+           cx="54.462521"
+           cy="111.34473"
+           r="19.935089" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:24.8611px;line-height:normal;font-family:Poppins;-inkscape-font-specification:'Poppins, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-decoration-color:#000000;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:1.16883;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
+           x="54.176624"
+           y="120.07097"
+           id="text433"><tspan
+             sodipodi:role="line"
+             id="tspan431"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.8611px;font-family:Poppins;-inkscape-font-specification:'Poppins, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:1.16883"
+             x="54.176624"
+             y="120.07097">R</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
